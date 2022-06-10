@@ -63,13 +63,13 @@ resource "google_storage_bucket_object" "rules" {
 }
 
 # Let oathkeeper read objects from it
-resource "google_storage_bucket_iam_member" "oathkeeper-viewer" {
+/*resource "google_storage_bucket_iam_member" "oathkeeper-viewer" {
   bucket = google_storage_bucket.config.name
   role   = "roles/storage.objectViewer"
   # member = "serviceAccount:${google_service_account.oathkeeper.email}"
   member = "allUsers" # work around until we can use the cloud API https://github.com/ory/oathkeeper/issues/425
 }
-
+*/
 # Cloud Run ORY Oathkeeper
 resource "google_cloud_run_service" "oathkeeper" {
   name     = "oathkeeper"
