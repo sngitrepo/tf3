@@ -48,7 +48,7 @@ async function connectToDatabase() {
 async function startServer() {
   const requestListener = async function (req, res) {
     try {
-      console.log("Request to", req.url);
+#      console.log("Request to", req.url);
 
       res.writeHead(200);
       res.end("My first server!");
