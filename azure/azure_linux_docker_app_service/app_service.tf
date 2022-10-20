@@ -38,7 +38,7 @@ resource "azurerm_app_service_plan" "current" {
   }
 }
 
-# App service
+/* # App service
 resource "azurerm_app_service" "current" {
   name                = local.app_service_name
   location            = data.azurerm_resource_group.current.location
@@ -85,7 +85,7 @@ resource "azurerm_app_service" "current" {
   # Configure if you need EasyAuth
   # auth_settings {
   # }
-}
+}*/
 
 # Deployment slot for better availability during deployments
 resource "azurerm_app_service_slot" "next" {
