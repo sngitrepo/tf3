@@ -1,6 +1,6 @@
 # Create the main EC2 instance
 # https://www.terraform.io/docs/providers/aws/r/instance.html
-resource "aws_instance" "this" {
+# resource "aws_instance" "this" {
   instance_type          = "${var.instance_type}"
   ami                    = "${var.instance_ami}"
   availability_zone      = "${local.availability_zone}"
