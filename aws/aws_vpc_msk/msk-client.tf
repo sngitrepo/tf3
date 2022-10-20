@@ -35,7 +35,7 @@ resource "aws_iam_role_policy_attachment" "Kafka-Client-IAM-role-att2" {
   role       = aws_iam_role.KafkaClientIAM_Role.name
 }
 
-resource "aws_instance" "Kafka-Client-EC2-Instance" {
+#resource "aws_instance" "Kafka-Client-EC2-Instance" {
   ami                    = var.msk_ami
   instance_type          = var.msk_instance_type
   key_name               = var.key_name
